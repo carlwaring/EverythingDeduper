@@ -94,7 +94,6 @@ These features are included in the Full Edition:
 - Editable keeper‑priority list  
 - Reorderable priority folders  
 - Apply priority rules per run  
-- Premium‑mode indicators in UI  
 
 ### 🖼️ **Enhanced Preview Experience**
 - Larger preview window  
