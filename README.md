@@ -42,8 +42,8 @@ Both editions are standalone EXEs — no installers, no dependencies.
 
 # 🧩 Features
 
-## **Lite Edition Features**
-These features are included in the Lite Edition:
+## **Standard Edition Features**
+These features are included in the Standard Edition:
 
 ### 🔍 **Audit Engine**
 - Fast, threaded scanning  
@@ -89,6 +89,7 @@ These features are included in the Lite Edition:
 These features are included in the Full Edition:
 
 ### 🔧 **Premium Workflow Enhancements**
+- Faster audit engine
 - Multi‑file keeper selection  
 - Editable keeper‑priority list  
 - Reorderable priority folders  
