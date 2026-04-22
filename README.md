@@ -30,7 +30,7 @@ It’s built to be *simple*, *predictable*, and *trustworthy*.
 # 📦 Editions  
 Everything Deduper is available in two editions. Both are released as **Donationware**.
 
-### **Lite Edition**  
+### **Standard Edition**  
 A complete, fully‑functional deduper with all core features.
 
 ### **Full Edition**  
