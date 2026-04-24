@@ -133,7 +133,7 @@ Everything Deduper is released as **Donationware**.
 
 If it saved you time or helped clean up your files, you can support future utilities here:
 
-👉 **https://www.paypal.me/carlwaring**
+👉 **PayPal.Me/carlrwaring**
 
 **Suggested donations:**
 
