@@ -100,7 +100,6 @@ These features are included in the Full Edition:
 # 🚀 Future Ideas (Not Promised)
 These are **parked ideas**, not commitments. They may or may not appear in future versions.
 
-- Add directory to an existing audit  
 - Multi‑cache support for multi‑root audits  
 - Export duplicate results to a simple text file  
 - Skip unreadable files with a warning list  
