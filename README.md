@@ -93,12 +93,7 @@ These features are included in the Full Edition:
 - Multi‑file keeper selection  
 - Editable keeper‑priority list  
 - Reorderable priority folders  
-- Apply priority rules per run  
-
-### 🗃️ **Advanced Control**
-- Extended file‑type filters  
-- More robust resume logic  
-- Additional UI polish and quality‑of‑life touches  
+- Apply priority rules per run
 
 ---
 
