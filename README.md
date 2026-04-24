@@ -129,7 +129,7 @@ These are simply ideas — **no promises, no roadmap**.
 # ❤️ Donationware  
 Everything Deduper is released as **Donationware**.
 
-If it saved you time or helped clean up your files, you can support future utilities here:
+If it saved you time or helped clean up your files, you can support any possible future updates here:
 
 👉 **PayPal.Me/carlrwaring**
 
