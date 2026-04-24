@@ -102,8 +102,7 @@ These are **parked ideas**, not commitments. They may or may not appear in futur
 
 - Multi‑cache support for multi‑root audits  
 - Export duplicate results to a simple text file  
-- Ignore files smaller than X KB  
-- Hash only files larger than X KB  
+- Ignore files smaller/larger than X kb/mb
 - Richer installer metadata extraction (EXE/MSI)  
 - Previous/Next navigation inside preview window  
 - UI indicator explaining why a file was auto‑selected  
