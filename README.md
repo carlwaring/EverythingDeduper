@@ -147,8 +147,8 @@ No nags. No popups. No guilt.
 # 📥 Downloads
 Releases are available on the GitHub Releases page:
 
-- **Everything Deduper Lite**  
-- **Everything Deduper Full**  
+- **Everything Deduper Standard Edition**  
+- **Everything Deduper Premium Edition**  
 
 ---
 
