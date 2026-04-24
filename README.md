@@ -136,7 +136,7 @@ If it saved you time or helped clean up your files, you can support future utili
 **Suggested donations:**
 
 - **£5** — Standard Edition  
-- **£10–£15** — Premium Edition  
+- **£10** — Premium Edition  
 
 Donations are optional, appreciated, and help fund future tools.
 
