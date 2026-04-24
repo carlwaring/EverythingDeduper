@@ -152,13 +152,6 @@ Releases are available on the GitHub Releases page:
 - **Everything Deduper Lite**  
 - **Everything Deduper Full**  
 
-Each release includes:
-
-- EXE  
-- README  
-- Changelog  
-- Screenshots  
-
 ---
 
 # 🛠️ Requirements
