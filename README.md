@@ -74,7 +74,8 @@ These features are included in the Standard Edition:
 - Safe copy‑out model (never deletes originals) and keeps original directory stucture 
 - Resume support via log parsing  
 - Dry‑run mode  
-- Clear logging of keepers and duplicates  
+- Clear logging of keepers and duplicates
+- Optional "Auto" mode for 1-click deduping
 
 ### 🖥️ **GUI**
 - Clean, modern interface  
