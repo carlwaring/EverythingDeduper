@@ -121,8 +121,6 @@ These are **parked ideas**, not commitments. They may or may not appear in futur
 - UI indicator explaining why a file was auto‑selected  
 - Persistence of keeper‑priority list to settings.json  
 - Compare two different directories  
-- Preview window builds off‑screen then animates in  
-- Locked premium features to revisit later  
 
 These are simply ideas — **no promises, no roadmap**.
 
