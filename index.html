@@ -3,34 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <title>Everything Deduper – Download</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; line-height: 1.6; }
-    h1 { text-align: center; }
+    body {
+        font-family: system-ui, Arial, sans-serif;
+        background: #f5f7fa;
+        margin: 0;
+        padding: 0;
+        color: #222;
+    }
+    .container {
+        max-width: 700px;
+        margin: 60px auto;
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    h1 {
+        text-align: center;
+        margin-top: 0;
+        font-size: 2.2rem;
+    }
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
     .btn {
         display: block;
-        padding: 15px;
+        padding: 16px;
         margin: 20px 0;
         background: #0366d6;
         color: white;
         text-align: center;
         text-decoration: none;
-        border-radius: 6px;
-        font-size: 18px;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .btn:hover {
+        background: #024ea5;
+    }
+    footer {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 0.9rem;
+        color: #666;
     }
 </style>
 </head>
 <body>
-<h1>Everything Deduper</h1>
-<p>Choose your download:</p>
 
-<a class="btn" href="https://github.com/carlwaring/EverythingDeduper/releases/latest/download/EverythingDeduper.v1.1s.exe">
-    Download Standard Edition
-</a>
+<div class="container">
+    <h1>Everything Deduper</h1>
+    <p>
+        A fast, simple tool for finding and removing duplicate files on Windows.
+        Choose your download below:
+    </p>
 
-<a class="btn" href="https://github.com/carlwaring/EverythingDeduper/releases/latest/download/EverythingDeduper.v1.1p.exe">
-    Download Full Edition
-</a>
+    <a class="btn" href="https://github.com/carlwaring/EverythingDeduper/releases/latest/download/EverythingDeduper.v1.1s.exe">
+        Download Standard Edition
+    </a>
 
-<p>Windows 10 or later. Portable EXEs — no installation required.</p>
+    <a class="btn" href="https://github.com/carlwaring/EverythingDeduper/releases/latest/download/EverythingDeduper.v1.1p.exe">
+        Download Full Edition
+    </a>
+
+    <p>
+        Works on Windows 10 or later.  
+        Portable EXEs — no installation required.
+    </p>
+</div>
+
+<footer>
+    © 2026 Carl Waring — Donationware  
+</footer>
+
 </body>
 </html>
