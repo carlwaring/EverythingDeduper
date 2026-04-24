@@ -102,7 +102,6 @@ These are **parked ideas**, not commitments. They may or may not appear in futur
 
 - Multi‑cache support for multi‑root audits  
 - Export duplicate results to a simple text file  
-- Skip unreadable files with a warning list  
 - Ignore files smaller than X KB  
 - Hash only files larger than X KB  
 - Richer installer metadata extraction (EXE/MSI)  
