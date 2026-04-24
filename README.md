@@ -77,7 +77,7 @@ These features are included in the Standard Edition:
 - Clear logging of keepers and duplicates  
 
 ### 🖥️ **GUI**
-- Clean, modern Tkinter interface  
+- Clean, modern interface  
 - Clear layout  
 - Progress indicators  
 - Interruptible operations  
