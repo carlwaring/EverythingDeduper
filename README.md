@@ -95,11 +95,6 @@ These features are included in the Full Edition:
 - Reorderable priority folders  
 - Apply priority rules per run  
 
-### 🖼️ **Enhanced Preview Experience**
-- Larger preview window  
-- Better metadata display  
-- Improved routing for file types  
-
 ### 🗃️ **Advanced Control**
 - Extended file‑type filters  
 - More robust resume logic  
