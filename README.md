@@ -138,7 +138,7 @@ If it saved you time or helped clean up your files, you can support any possible
 - **£5** — Standard Edition  
 - **£10** — Premium Edition  
 
-Donations are optional, appreciated, and help fund future tools.
+Donations are entirely optional and much-appreciated.
 
 No nags. No popups. No guilt.
 
