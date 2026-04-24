@@ -51,7 +51,7 @@ These features are included in the Standard Edition:
 - Hash caching for faster re‑audits  
 - Skips unreadable files with warnings  
 - Generates both raw and readable audit logs  
-- Automatic cleanup of old logs  
+- Push-button cleanup of old logs  
 
 ### 🗂️ **Preview‑Driven Keeper Selection**
 - Auto‑selects a keeper using smart rules  
