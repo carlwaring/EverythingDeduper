@@ -71,7 +71,7 @@ These features are included in the Standard Edition:
 
 ### 🧹 **Dedupe Engine**
 - Preview‑first workflow  
-- Safe copy‑out model (never deletes originals)  
+- Safe copy‑out model (never deletes originals) and keeps original directory stucture 
 - Resume support via log parsing  
 - Dry‑run mode  
 - Clear logging of keepers and duplicates  
