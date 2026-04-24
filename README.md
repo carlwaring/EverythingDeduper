@@ -147,14 +147,14 @@ No nags. No popups. No guilt.
 # 📥 Downloads
 Releases are available on the GitHub Releases page:
 
-- **Everything Deduper Standard Edition**  
-- **Everything Deduper Premium Edition**  
+- **Everything Deduper -Standard Edition**  
+- **Everything Deduper - Premium Edition**  
 
 ---
 
 # 🛠️ Requirements
 - Windows 10 or later  
-- No installation required  
+- No installation required
 - No admin rights needed  
 
 ---
