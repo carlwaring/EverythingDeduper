@@ -1,0 +1,76 @@
+# ⭐ **Features at a Glance**
+
+- **Deterministic duplicate detection** using SHA‑256  
+- **Fast audit engine** with clear summaries and raw text logs  
+- **Manual and Auto‑mode dedupe**  
+- **Safe‑delete workflow** (duplicates are *moved*, never deleted)  
+- **Transparent logging** for every action taken  
+- **Simple, predictable UI** — no hidden behaviour  
+- **Works on any folder** (photos, documents, videos, archives, etc.)  
+- **Donationware** — all features available to all users  
+
+---
+
+# ❓ **Why EverythingDeduper?**
+
+Most dedupe tools try to be clever. EverythingDeduper tries to be **predictable**.
+
+- **You always know what will happen before it happens**  
+- **No silent deletions**  
+- **No “AI guessing” which file you want to keep**  
+- **No proprietary database or hidden metadata**  
+- **No lock‑in** — everything is plain text and transparent  
+
+EverythingDeduper is built for users who want **clarity**, **control**, and **repeatable results**, not surprises.
+
+---
+
+# 💬 **FAQ**
+
+### **Does the tool delete my files?**  
+No. Duplicates are **copied** to a destination folder you choose.  
+You can restore them at any time.
+
+---
+
+### **What is an audit file?**  
+A plain‑text report listing all duplicate groups found during the audit.  
+You can open it in any text editor.
+
+---
+
+### **Do I need to review the audit before deduping?**  
+It’s optional, but recommended — especially for important folders.
+
+---
+
+### **What’s the difference between Manual and Auto‑mode?**  
+- **Manual Mode:** You choose the keeper for each group  
+- **Auto‑mode:** The tool chooses based on rules (size, date, path, etc.)
+
+---
+
+### **Can I undo a dedupe?**  
+Yes. Since duplicates are copied, not deleted, you can simply start again.
+
+---
+
+### **Does EverythingDeduper modify my files?**  
+No. It only copies unique file and duplicates. It never edits or rewrites file contents.
+
+---
+
+### **Does it work on network drives or external drives?**  
+Yes — as long as the drive is accessible through Windows Explorer.
+
+---
+
+### **Is there a Premium version?**  
+Not at the moment.  
+All features are available to all users.
+
+---
+
+### **Is the tool open source?**  
+No.
+

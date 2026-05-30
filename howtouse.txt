@@ -1,0 +1,75 @@
+# ⚡ **Quick Start**
+
+If you just want to get up and running fast, here’s the shortest possible guide:
+
+1. **Audit a folder**  
+   - Go to **Audit** → choose a folder → **Start Audit**  
+   - A summary and a raw audit file are generated
+
+2. **Review duplicates**  
+   - Check the summary or open the raw audit file  
+   - Confirm the groups look correct
+
+3. **Dedupe safely**  
+   - Go to **Deduper** → select the audit file → choose a destination folder  
+   - Pick **Manual** or **Auto‑mode**  
+   - Click **Start Dedupe**  
+   - Duplicates are *copied*, never deleted
+
+
+---
+
+# 🚀 **Usage**
+
+## **1. Audit**
+The audit phase scans your chosen folder, identifies duplicate files, and generates a detailed text report.
+
+1. Open the **Audit** tab  
+2. Click **Select Folder** and choose the folder you want to analyse  
+   - This can be any folder containing files (photos, documents, videos, archives, etc.)  
+3. Click **Start Audit**  
+   - EverythingDeduper hashes all files, groups duplicates, and builds a summary  
+4. When the audit completes, you can:  
+   - View the **on‑screen summary** for a quick overview  
+   - Open the **raw audit file** for full details, including every duplicate group and file path  
+
+**Tip:** The audit file is plain text — open it in Notepad, VS Code, or any editor.
+
+---
+
+## **2. Review**
+Before deduping, it’s wise to confirm what the audit found.
+
+- Browse duplicate groups in the summary  
+- Open the raw audit log to inspect exact file paths  
+- Check how many copies exist and where they are located  
+- Confirm the audit results match your expectations  
+
+This step is optional but recommended, especially for large or important folders.
+
+---
+
+## **3. Dedupe**
+The dedupe phase safely removes duplicates by moving them to a destination folder you choose.
+
+1. Open the **Deduper** tab  
+2. Click **Select Audit File** and choose the audit file generated earlier  
+3. Click **Select Destination Folder**  
+   - All removed duplicates will be moved here (never permanently deleted)  
+4. Choose your dedupe mode:  
+   - **Manual Mode**  
+     - You choose the keeper for each duplicate group  
+     - Ideal for photos, documents, or anything where content matters  
+   - **Auto‑mode**  
+     - The tool selects keepers using rules (size, date, path, etc.)  
+     - Ideal for large folders or repeated workflows  
+5. Click **Start Dedupe**  
+   - Keepers remain in place  
+   - All other copies are moved to the destination folder  
+   - A log is generated showing exactly what was moved  
+
+**Tip:** Because duplicates are moved, not deleted, you can always restore them if needed.
+
+---
+
+If you want, I can also generate a **“Quick Start”** section or a **visual workflow diagram** in Markdown.
