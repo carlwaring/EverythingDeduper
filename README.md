@@ -151,6 +151,8 @@ Everything Deduper is released as **Donationware**.  Suggested donation £5
 You may use it freely for personal and/or professional work.  
 If you find it useful, consider supporting development — it helps keep the project alive and evolving.
 
+**Donate:** https://PayPal.Me/carlrwaring
+
 Source code is not included.
 
 ---
