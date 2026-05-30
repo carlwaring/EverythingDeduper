@@ -153,8 +153,6 @@ If you find it useful, consider supporting development — it helps keep the pro
 
 **Donate:** https://PayPal.Me/carlrwaring
 
-Source code is not included.
-
 ---
 
 ## 🤝 **Contributing**
