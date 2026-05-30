@@ -1,11 +1,604 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>EverythingDeduper</title>
-  </head>
-  <body>
-    <h1>EverythingDeduper</h1>
-    <p>Welcome to the official project page.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>EverythingDeduper – Fast, Safe File Deduplication</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EverythingDeduper – a fast, safe Windows tool for finding and handling duplicate files.">
+  <style>
+    :root {
+      --bg: #05060a;
+      --bg-alt: #0b0d14;
+      --accent: #3fa9f5;
+      --accent-soft: rgba(63,169,245,0.12);
+      --accent-strong: #2b8ad0;
+      --text: #f5f7ff;
+      --muted: #a3acc4;
+      --border: #1a1d27;
+      --danger: #ff6b6b;
+      --ok: #4cd964;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font);
+      background: radial-gradient(circle at top, #15192b 0, #05060a 55%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .logo-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      background: radial-gradient(circle at 30% 20%, #ffffff 0, #3fa9f5 35%, #1b2440 100%);
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 0 18px rgba(63,169,245,0.5);
+      position: relative;
+    }
+    .logo-mark::after {
+      content: "";
+      position: absolute;
+      inset: 7px;
+      border-radius: 6px;
+      border: 2px solid rgba(5,6,10,0.9);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+    }
+    nav {
+      display: flex;
+      gap: 18px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    nav a { color: var(--muted); }
+    nav a:hover { color: var(--text); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; }
+    }
+
+    .hero-title {
+      font-size: clamp(2.1rem, 3vw, 2.7rem);
+      font-weight: 650;
+      letter-spacing: 0.02em;
+      margin-bottom: 12px;
+    }
+    .hero-sub {
+      color: var(--muted);
+      font-size: 0.98rem;
+      max-width: 520px;
+      margin-bottom: 20px;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+      font-size: 0.8rem;
+    }
+    .badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(10,12,20,0.9);
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: var(--ok);
+      box-shadow: 0 0 8px rgba(76,217,100,0.8);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .btn {
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #05060a;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.6), 0 0 18px rgba(63,169,245,0.7);
+    }
+    .btn-primary:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+    .btn-ghost {
+      background: rgba(10,12,20,0.9);
+      color: var(--muted);
+      border-color: rgba(255,255,255,0.08);
+    }
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,0.18);
+      color: var(--text);
+    }
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-card {
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: radial-gradient(circle at top left, #1a2238 0, #05060a 55%);
+      padding: 18px 18px 16px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 0 0, rgba(63,169,245,0.18), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .hero-card-inner {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .hero-card-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .hero-card-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .hero-metrics {
+      display: grid;
+      gap: 8px;
+      font-size: 0.78rem;
+    }
+    .metric {
+      padding: 7px 9px;
+      border-radius: 10px;
+      background: rgba(5,6,10,0.85);
+      border: 1px solid rgba(255,255,255,0.04);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .metric-label {
+      color: var(--muted);
+    }
+    .metric-value {
+      font-family: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.78rem;
+      color: var(--text);
+    }
+    .metric-pill {
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(63,169,245,0.12);
+      color: var(--accent);
+      font-size: 0.7rem;
+    }
+    .hero-steps {
+      font-size: 0.78rem;
+      display: grid;
+      gap: 6px;
+    }
+    .step {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--muted);
+      background: rgba(5,6,10,0.9);
+    }
+    .step-text {
+      color: var(--muted);
+    }
+
+    .section {
+      margin-top: 40px;
+      padding: 22px 18px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: rgba(5,6,10,0.9);
+    }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 550;
+    }
+    .section-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 6px;
+    }
+    .feature {
+      padding: 12px 11px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.04);
+      background: linear-gradient(145deg, rgba(15,18,30,0.98), rgba(8,10,18,0.98));
+      font-size: 0.86rem;
+    }
+    .feature-title {
+      font-weight: 500;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .feature-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 6px;
+      background: rgba(63,169,245,0.16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+    .feature-body {
+      color: var(--muted);
+      font-size: 0.83rem;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 18px;
+      margin-top: 10px;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 800px) {
+      .columns { grid-template-columns: 1fr; }
+    }
+    .list {
+      list-style: none;
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+    }
+    .list li::before {
+      content: "•";
+      color: var(--accent);
+      margin-right: 6px;
+    }
+
+    .faq-item {
+      margin-bottom: 10px;
+    }
+    .faq-q {
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    .faq-a {
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 32px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <div>EverythingDeduper</div>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#download">Download</a>
+        <a href="https://github.com/carlwaring/EverythingDeduper" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="hero-title">Fast, safe file deduplication for Windows.</div>
+          <p class="hero-sub">
+            EverythingDeduper scans your folders, finds duplicate files using deterministic hashing, and moves them out of the way — never deleting anything automatically.
+          </p>
+
+          <div class="hero-badges">
+            <div class="badge">
+              <span class="badge-dot"></span>
+              Safe by design – duplicates are moved, not deleted
+            </div>
+            <div class="badge">Portable · No installer</div>
+            <div class="badge">Windows 10 &amp; 11</div>
+          </div>
+
+          <div class="hero-actions" id="download">
+            <a class="btn btn-primary" href="https://github.com/carlwaring/EverythingDeduper/releases/latest">
+              <span>⬇ Download latest version</span>
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/carlwaring/EverythingDeduper" target="_blank" rel="noopener">
+              <span>View on GitHub</span>
+            </a>
+          </div>
+          <div class="hero-note">
+            No installation. Just download, extract (if using the ZIP), and run the EXE.
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-hidden="true">
+          <div class="hero-card-inner">
+            <div class="hero-card-header">
+              <div>
+                <div class="hero-card-title">Typical dedupe run</div>
+                <div style="font-size:0.75rem;color:var(--muted);">Example metrics on a photo archive</div>
+              </div>
+              <div class="metric-pill">Deterministic · SHA‑256</div>
+            </div>
+            <div class="hero-card-grid">
+              <div class="hero-metrics">
+                <div class="metric">
+                  <div class="metric-label">Files scanned</div>
+                  <div class="metric-value">128,493</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-label">Duplicate groups</div>
+                  <div class="metric-value">3,742</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-label">Space recoverable</div>
+                  <div class="metric-value">86.3 GB</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-label">Risk of silent delete</div>
+                  <div class="metric-value" style="color:var(--danger);">0% (move only)</div>
+                </div>
+              </div>
+              <div class="hero-steps">
+                <div class="step">
+                  <div class="step-num">1</div>
+                  <div class="step-text">Point EverythingDeduper at a folder containing files.</div>
+                </div>
+                <div class="step">
+                  <div class="step-num">2</div>
+                  <div class="step-text">Run an audit to see what duplicates exist.</div>
+                </div>
+                <div class="step">
+                  <div class="step-num">3</div>
+                  <div class="step-text">Review the log, then run the dedupe pass to move duplicates.</div>
+                </div>
+                <div class="step">
+                  <div class="step-num">4</div>
+                  <div class="step-text">Verify the “duplicates” folder, then delete or archive at your pace.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="features">
+        <div class="section-header">
+          <div class="section-title">Why EverythingDeduper?</div>
+          <div class="section-sub">Designed to be predictable, transparent, and hard to misuse.</div>
+        </div>
+        <div class="features">
+          <article class="feature">
+            <div class="feature-title">
+              <div class="feature-icon">🔍</div>
+              Fast, deterministic duplicate detection
+            </div>
+            <div class="feature-body">
+              Uses cryptographic hashing (SHA‑256) to identify duplicates reliably, regardless of file name or location.
+            </div>
+          </article>
+          <article class="feature">
+            <div class="feature-title">
+              <div class="feature-icon">🛡️</div>
+              Safe by design
+            </div>
+            <div class="feature-body">
+              EverythingDeduper never silently deletes files. Duplicates are moved to a separate location so you stay in control.
+            </div>
+          </article>
+          <article class="feature">
+            <div class="feature-title">
+              <div class="feature-icon">📁</div>
+              Works on real‑world folders
+            </div>
+            <div class="feature-body">
+              Point it at photo archives, downloads, documents, or external drives. If there are files, it can dedupe them.
+            </div>
+          </article>
+          <article class="feature">
+            <div class="feature-title">
+              <div class="feature-icon">🧰</div>
+              Portable, no installer
+            </div>
+            <div class="feature-body">
+              Just download, extract, and run. No system‑wide changes, no services, no background processes.
+            </div>
+          </article>
+          <article class="feature">
+            <div class="feature-title">
+              <div class="feature-icon">📜</div>
+              Transparent logs
+            </div>
+            <div class="feature-body">
+              Detailed logs show exactly what was found and what was moved, so you can audit every step.
+            </div>
+          </article>
+          <article class="feature">
+            <div class="feature-title">
+              <div class="feature-icon">⚙️</div>
+              Built for predictability
+            </div>
+            <div class="feature-body">
+              Clear workflow: audit → review → dedupe. No hidden automation, no surprise behaviour.
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works">
+        <div class="section-header">
+          <div class="section-title">How it works</div>
+          <div class="section-sub">A simple, repeatable workflow you can trust.</div>
+        </div>
+        <div class="columns">
+          <div>
+            <h3 style="font-size:0.9rem;margin-bottom:6px;">Workflow</h3>
+            <ol class="list" style="list-style:decimal inside;gap:4px;">
+              <li>Select a source folder containing the files you want to analyse.</li>
+              <li>Run an audit to identify duplicate groups without moving anything.</li>
+              <li>Review the audit log to confirm the results look sensible.</li>
+              <li>Run the dedupe pass to move duplicates into a dedicated folder.</li>
+              <li>Inspect the moved files and delete/archive them when you’re ready.</li>
+            </ol>
+          </div>
+          <div>
+            <h3 style="font-size:0.9rem;margin-bottom:6px;">What it doesn’t do</h3>
+            <ul class="list">
+              <li>Does not auto‑delete files behind your back.</li>
+              <li>Does not modify file contents.</li>
+              <li>Does not require admin rights or install services.</li>
+              <li>Does not touch anything you didn’t explicitly point it at.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <div class="section-title">FAQ</div>
+          <div class="section-sub">A few quick answers.</div>
+        </div>
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q">Is it safe to run on my main photo library?</div>
+            <div class="faq-a">
+              Yes. EverythingDeduper only moves duplicates into a separate folder. You can verify everything before deleting anything.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Does it require installation?</div>
+            <div class="faq-a">
+              No. It’s a portable EXE. Download, extract (if using the ZIP), and run.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Which versions of Windows are supported?</div>
+            <div class="faq-a">
+              EverythingDeduper is designed for Windows 10 and Windows 11.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">Where can I see the source code?</div>
+            <div class="faq-a">
+              The full source and issue tracker live on GitHub:
+              <a href="https://github.com/carlwaring/EverythingDeduper" target="_blank" rel="noopener">github.com/carlwaring/EverythingDeduper</a>.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> EverythingDeduper.</div>
+      <div>
+        View on <a href="https://github.com/carlwaring/EverythingDeduper" target="_blank" rel="noopener">GitHub</a> ·
+        Latest release: <a href="https://github.com/carlwaring/EverythingDeduper/releases/latest">downloads</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
