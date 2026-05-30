@@ -1,86 +1,82 @@
-# **Everything Deduper v1.37 — Standard Edition**
-
-A fast, safe, and intuitive tool for auditing and deduplicating files across any folder structure.  
-Everything Deduper provides a clean three‑stage workflow — **Audit → Review → Dedupe** — with strong safety guarantees, optional automation, and full manual control.
+# **Everything Deduper v1.36 — Standard Edition**  
+A fast, safe, and intuitive Windows tool for auditing and deduplicating files across any folder structure.  
+Everything Deduper uses a clean three‑stage workflow — **Audit → Review → Dedupe** — with strong safety guarantees, deterministic behaviour, and full manual control.
 
 ---
 
-## ✨ **Features at a Glance**
+## ✨ Features at a Glance
 
-### 🔍 **Audit Engine**
+### 🔍 Audit Engine
 - Recursive folder scanning  
 - Raw TSV + human‑readable summaries  
 - Deterministic, timestamped output  
-- Handles unreadable files safely  
-- “Open latest audit file” button
+- Graceful handling of unreadable files  
+- “Open latest audit file” shortcut  
 
-### 🧩 **Dedupe Engine**
+### 🧩 Dedupe Engine
 - Multi‑stage hashing (size → quick → full)  
 - Accurate duplicate detection  
-- Safe deletion with full logs  
+- **Copy‑only** dedupe (never deletes originals)  
 - Dry Run mode  
 - STOP button for safe interruption  
 - Fully threaded (no UI freezing)  
 
-### 🎛️ **Manual Multi‑Keeper Mode**
+### 🎛️ Manual Multi‑Keeper Mode
 - Select **one or more** files to keep  
-- Ideal for RAW+JPEG, edited/original, variants  
+- Ideal for RAW+JPEG, edited/original, or variant sets  
 - Logs reflect all keeper decisions  
 
-### ⚡ **Auto‑Mode (copy first found)**
+### ⚡ Auto‑Mode (copy first found)
 - One‑click automatic dedupe  
 - Keeps the first file in each group  
 - Fully logged  
 - Works with Dry Run  
 - Interruptible with STOP  
 
-### 📁 **Unified Picker System**
+### 📁 Unified Picker System
 - Consistent folder/file selection  
 - Callback‑based  
 - Thread‑safe  
-- Clean, predictable behaviour  
+- Predictable behaviour  
 
-### 📝 **Logging**
+### 📝 Logging
 - Raw audit logs  
-- Human‑readable summaries
-- Audit Summary displayed and saved to file  
-- Raw dedupe logs  
-- Human‑readable dedupe summaries  
+- Human‑readable summaries  
+- Dedupe logs + summaries  
 - Skipped files log  
 - Deterministic naming  
+- Audit Summary displayed and saved  
 
-### 🛡️ **Safety**
+### 🛡️ Safety
 - Confirmation before destructive actions  
-- Safe deletion (no partial deletes)  
+- **Copy‑only dedupe** (no silent deletes, no overwrites)  
 - Skip unreadable files  
-- No silent overwrites  
-- No silent auto‑deletes  
-- Cleanup/reset confirmation
-- Only ever copies files 
+- Cleanup/reset confirmation  
+- Predictable, transparent behaviour  
 
-### ⚙️ **Settings & Persistence**
-- UI fields restore correctly, if present  
-- Cleanup removes all generated files and summary 
+### ⚙️ Settings & Persistence
+- UI fields restore correctly (if present)  
+- Cleanup removes all generated files and summaries  
 
 ---
 
-## 📦 **Installation**
+## 📦 Installation
 
-Everything Deduper is a single file so is fully portable.
+Everything Deduper is a single portable executable.
 
 1. Download the latest **EverythingDeduper.exe** from the Releases page  
-2. Place it anywhere you like  
-3. Run it. (All user files created in same directory.)  
+2. Place it anywhere  
+3. Run it — all generated files stay in the same directory  
 
 No installer.  
 No dependencies.  
 No registry changes.
 
-Optional download to include documentation.
+Optional ZIP download includes documentation.
 
 ---
 
-## 🚀 **Usage**
+## 🚀 Usage
 
 ### **1. Audit**
 1. Open the **Audit** tab  
@@ -105,7 +101,7 @@ Auto‑mode keeps the first file only.
 
 ---
 
-## 🧹 **Cleanup**
+## 🧹 Cleanup
 
 The **Cleanup** button removes all files created by Everything Deduper:
 
@@ -115,11 +111,11 @@ The **Cleanup** button removes all files created by Everything Deduper:
 - Hash cache  
 - Settings file  
 
-(Note: A fresh Settings file  is created on next launch.)
+(A fresh settings file is created on next launch.)
 
 ---
 
-## 🚫 **Not Included (By Design)**
+## 🚫 Not Included (By Design)
 
 To keep the tool focused and predictable:
 
@@ -135,7 +131,7 @@ These may be considered for future versions based on user demand.
 
 ---
 
-## 🧪 **Stability & Performance**
+## 🧪 Stability & Performance
 
 - Fully threaded operations  
 - Deterministic behaviour  
@@ -145,17 +141,17 @@ These may be considered for future versions based on user demand.
 
 ---
 
-## 💛 **Donationware**
+## 💛 Donationware
 
-Everything Deduper is released as **Donationware**.  Suggested donation £5
-You may use it freely for personal and/or professional work.  
-If you find it useful, consider supporting development — it helps keep the project alive and evolving.
+Everything Deduper is released as **Donationware**. Suggested donation: **£5**.  
+You may use it freely for personal and professional work.  
+If you find it useful, consider supporting development — it helps keep the project alive.
 
-**Donate:** https://PayPal.Me/carlrwaring
+`https://PayPal.Me/carlrwaring`
 
 ---
 
-## 🤝 **Contributing**
+## 🤝 Contributing
 
 Bug reports, suggestions, and feature requests are welcome.  
 Please open an issue on the GitHub repository.
