@@ -1,4 +1,4 @@
-# **Everything Deduper v1.38 — Standard Edition**  
+# **Everything Deduper v1.39 — Standard Edition**  
 A fast, safe, and intuitive Windows tool for auditing and deduplicating files across any folder structure.  
 Everything Deduper uses a clean three‑stage workflow — **Audit → Review → Dedupe** — with strong safety guarantees, deterministic behaviour, and full manual control.
 
