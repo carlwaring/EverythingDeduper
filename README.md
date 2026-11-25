@@ -24,7 +24,7 @@ Everything Deduper uses a clean three‑stage workflow — **Audit → Review �
 ### 🎛️ Dedupe Modes
 
 #### Manual Mode
-- Preview duplicate groups before processing
+- Preview duplicates before processing
 - Automatically pre-selects keepers based on configured Keeper Rules
 - Select one or more files to keep
 - Ideal for RAW+JPEG, edited/original, or variant sets
