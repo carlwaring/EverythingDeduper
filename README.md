@@ -21,17 +21,23 @@ Everything Deduper uses a clean three‑stage workflow — **Audit → Review �
 - STOP button for safe interruption  
 - Fully threaded (no UI freezing)  
 
-### 🎛️ Manual Multi‑Keeper Mode
-- Select **one or more** files to keep  
-- Ideal for RAW+JPEG, edited/original, or variant sets  
-- Logs reflect all keeper decisions  
+### 🎛️ Dedupe Modes
 
-### ⚡ Auto‑Mode (copy first found)
-- One‑click automatic dedupe  
-- Keeps the first file in each group  
-- Fully logged  
-- Works with Dry Run  
-- Interruptible with STOP  
+#### Manual Mode
+- Preview duplicate groups before processing
+- Automatically pre-selects keepers based on configured Keeper Rules
+- Select one or more files to keep
+- Ideal for RAW+JPEG, edited/original, or variant sets
+- Full preview support for PDFs, images, text files and Office documents
+- Every decision is recorded in the log
+
+#### ⚡ Auto-Mode
+- One-click automatic dedupe
+- Automatically honours configured Keeper Rules
+- Falls back to normal keeper selection when no priority folders match
+- Fully logged
+- Supports Dry Run mode
+- Can be stopped safely at any time
 
 ### 📁 Unified Picker System
 - Consistent folder/file selection  
@@ -56,7 +62,8 @@ Everything Deduper uses a clean three‑stage workflow — **Audit → Review �
 
 ### ⚙️ Settings & Persistence
 - UI fields restore correctly (if present)  
-- Cleanup removes all generated files and summaries  
+- One-click backup of all program-generated files
+- One-click reset - removes all generated files and summaries  
 
 ---
 
