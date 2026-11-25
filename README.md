@@ -34,7 +34,7 @@ Everything Deduper uses a clean three‑stage workflow — **Audit → Review �
 #### ⚡ Auto-Mode
 - One-click automatic dedupe
 - Automatically honours configured Keeper Rules
-- Falls back to normal keeper selection when no priority folders match
+- Falls back to "first copy found" when no priority folders match
 - Fully logged
 - Supports Dry Run mode
 - Can be stopped safely at any time
