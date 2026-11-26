@@ -122,22 +122,6 @@ The **Cleanup** button removes all files created by Everything Deduper:
 
 ---
 
-## 🚫 Not Included (By Design)
-
-To keep the tool focused and predictable:
-
-- File‑type filtering  
-- Auto‑mode multi‑keeper  
-- Preset extension groups  
-- Update checker  
-- Favourites system  
-- Safe‑mode launch flag  
-- Embedded version metadata  
-
-These may be considered for future versions based on user demand.
-
----
-
 ## 🧪 Stability & Performance
 
 - Fully threaded operations  
