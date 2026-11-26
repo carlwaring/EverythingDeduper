@@ -4,6 +4,28 @@ Everything Deduper uses a clean three‑stage workflow — **Audit → Review �
 
 ---
 
+## Screenshots
+
+### Audit Tab
+
+![Audit Tab](Audit.jpg)
+
+### Summary Tab
+
+![Summary Tab](Summary.jpg)
+
+### Keeper Rules Tab
+
+![Keeper Rules Tab](KeeperRules.jpg)
+
+### Dedupe Tab
+
+![Dedupe Tab](Dedupe.jpg)
+
+### About Tab
+
+![About Tab](About.jpg)
+
 ## ✨ Features at a Glance
 
 ### 🔍 Audit Engine
